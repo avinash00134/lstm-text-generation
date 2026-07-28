@@ -5,7 +5,7 @@ LSTM-based text generation model trained on Shakespeare's works. Supports both c
 ## 🚀
 ### Installation
 ```bash
-git clone <repository-url>
+git clone https://github.com/avinash00134/lstm-text-generation.git
 cd lstm-text-generation
 pip install -r requirements.txt
 mkdir -p data models outputs# lstm-text-generation
@@ -21,7 +21,7 @@ LSTM-based text generation model trained on Shakespeare's works. Supports both c
 
 ### Installation
 ```bash
-git clone <repository-url>
+git clone https://github.com/avinash00134/lstm-text-generation.git
 cd lstm-text-generation
 pip install -r requirements.txt
 mkdir -p data models outputs
