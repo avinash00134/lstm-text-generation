@@ -19,7 +19,7 @@ class TextPreprocessor:
         self.X = None
         self.y = None
     
-    def load_text_from_url(self, url="https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt"):
+    def load_text_from_url(self, url="https://www.gutenberg.org/cache/epub/100/pg100.txt"):
         
         try:
             response = requests.get(url)

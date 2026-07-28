@@ -110,7 +110,6 @@ def train_word_level():
         batch_size=128
     )
     
-    # Save model and tokenizer
     model.save_model("models/word_lstm_model.h5")
     preprocessor.save_tokenizer("models/word_tokenizer.pkl")
     
@@ -124,18 +123,17 @@ def experiment_with_architectures():
     
     preprocessor = TextPreprocessor(max_sequence_length=20)
     text = preprocessor.load_text_from_url()
-    clean_text = preprocessor.preprocess_text(text)[:5000]  # Use smaller sample
+    clean_text = preprocessor.preprocess_text(text)[:5000]  
     
-    # Tokenize
     preprocessor.tokenize_text(clean_text, character_level=True)
     X, y = preprocessor.create_sequence_pairs()
     
-    # Convert to indices
+    
     char_to_idx, idx_to_char = preprocessor.tokenizer
     X_encoded = []
     y_encoded = []
     
-    for seq, target in preprocessor.sequences[:1000]:  # Use subset for experiments
+    for seq, target in preprocessor.sequences[:1000]:  
         encoded_seq = [char_to_idx[char] for char in seq]
         X_encoded.append(encoded_seq)
         y_encoded.append(char_to_idx[target])
@@ -235,4 +233,3 @@ if __name__ == "__main__":
         import traceback
         traceback.print_exc()
 
-  
